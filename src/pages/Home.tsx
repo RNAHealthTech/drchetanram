@@ -5,7 +5,7 @@ const HomePage: React.FC = () => {
     return (
         <div className="relative">
             {/* Hero Section */}
-            <div className="relative min-h-screen">
+            <div className="relative min-h-[90vh]">
                 {/* Background Image with Overlay */}
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
                     transition={{ duration: 1 }}
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: `url('/images/bg.JPG')`,
+                        backgroundImage: `url('/images/bg2.jpg')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}
@@ -21,55 +21,34 @@ const HomePage: React.FC = () => {
                     <div className="absolute inset-0 bg-black/50" />
                 </motion.div>
 
-                {/* Header/Navigation */}
-                <motion.header
-                    initial={{ y: -100 }}
-                    animate={{ y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="relative z-10 px-6 py-4"
-                >
-                    <nav className="max-w-7xl mx-auto flex items-center justify-between">
-                        <div className="text-white text-2xl font-semibold">DR. CHETAN RAM</div>
-                        <div className="hidden md:flex items-center space-x-8 text-white">
-                            <a href="#practice" className="hover:text-gray-300">Practice</a>
-                            <a href="#treatments" className="hover:text-gray-300">Treatments</a>
-                            <a href="#conditions" className="hover:text-gray-300">Conditions</a>
-                            <a href="#resources" className="hover:text-gray-300">Resources</a>
-                            <button className="text-white border-white hover:bg-white hover:text-black">
-                                Request Consultation
-                            </button>
-                        </div>
-                    </nav>
-                </motion.header>
-
                 {/* Hero Content */}
-                <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-80px)]">
-                    <div className="max-w-7xl mx-auto px-6 py-20 text-center">
+                <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-10vh)]">
+                    <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20 text-center">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.5 }}
-                            className="space-y-6"
+                            className="space-y-8 md:space-y-6" // Increased spacing on mobile
                         >
-                            <h2 className="text-white text-xl tracking-wider">THE PRACTICE</h2>
-                            <h1 className="text-white text-5xl md:text-7xl font-light leading-tight">
+                            <h2 className="text-white text-lg md:text-xl tracking-wider mb-4 md:mb-0">
+                                THE PRACTICE
+                            </h2>
+                            <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-light leading-relaxed md:leading-tight px-2 md:px-0">
                                 ADVANCED SPINE CARE FROM
-                                <br />
-                                A WORLD-CLASS SURGEON
+                                <br className="hidden md:block" />
+                                <span className="block mt-2 md:mt-0 md:inline">A WORLD-CLASS SURGEON</span>
                             </h1>
-                            <p className="text-gray-200 text-xl max-w-2xl mx-auto">
-                                Specializing in minimally invasive spine surgery, complex spine disorders, and innovative surgical techniques
-                            </p>
+
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5, delay: 1 }}
-                                className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8"
+                                className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-4 mt-10 md:mt-8"
                             >
-                                <button className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg">
+                                <button className="w-full md:w-auto bg-white text-black hover:bg-gray-200 px-4 py-2 md:px-8 md:py-4 text-lg">
                                     Schedule an Appointment
                                 </button>
-                                <button className="text-white border-white hover:bg-white hover:text-black px-8 py-6 text-lg">
+                                <button className="w-full md:w-auto text-white border border-white hover:bg-white hover:text-black px-4 py-2 md:px-8 md:py-4 text-lg mt-4 md:mt-0">
                                     Learn More
                                 </button>
                             </motion.div>
@@ -82,12 +61,12 @@ const HomePage: React.FC = () => {
                     initial={{ y: 100 }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="relative z-10 bg-black/80 text-white py-4"
+                    className="relative z-10 bg-gray-900 text-white py-6 md:py-4"
                 >
-                    <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm">
-                        <div>CALL US: +91 9462292022</div>
-                        <div>Sir Ganga Ram Hospital, New Delhi</div>
-                        <div>
+                    <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center text-sm space-y-3 md:space-y-0">
+                        <div className="text-center md:text-left">CALL US: +91 9462292022</div>
+                        <div className="text-center">Sir Ganga Ram Hospital, New Delhi</div>
+                        <div className="text-center md:text-right">
                             <a href="mailto:dr.ckumawat@gmail.com" className="hover:text-gray-300">
                                 dr.ckumawat@gmail.com
                             </a>
@@ -144,16 +123,13 @@ const HomePage: React.FC = () => {
 
                         {/* Image Grid */}
                         <motion.div
-                            initial={{ opacity: 0, x: 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
+
                             viewport={{ once: true }}
                             className="relative z-10 grid grid-cols-2 gap-4" // Added z-index
                         >
                             {/* Top image */}
                             <motion.div
-                                whileHover={{ scale: 1.02 }}
-                                transition={{ duration: 0.2 }}
+
                                 className="col-span-2"
                             >
                                 <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
@@ -167,8 +143,7 @@ const HomePage: React.FC = () => {
 
                             {/* Bottom two images */}
                             <motion.div
-                                whileHover={{ scale: 1.02 }}
-                                transition={{ duration: 0.2 }}
+
                                 className="aspect-square bg-gray-100 rounded-lg overflow-hidden"
                             >
                                 <img
@@ -178,8 +153,7 @@ const HomePage: React.FC = () => {
                                 />
                             </motion.div>
                             <motion.div
-                                whileHover={{ scale: 1.02 }}
-                                transition={{ duration: 0.2 }}
+
                                 className="aspect-square bg-gray-100 rounded-lg overflow-hidden"
                             >
                                 <img

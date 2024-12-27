@@ -16,6 +16,7 @@ const Layout: React.FC<LayoutProps> = ({children}) => {
          </main>
        
          <Footer />
+         <WhatsApp />
        </div>
     )
 }
