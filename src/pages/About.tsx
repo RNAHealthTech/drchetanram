@@ -11,9 +11,10 @@ const AboutPage: React.FC = () => {
                     transition={{ duration: 1 }}
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: `url('/images/doc3.JPG')`,
+                        backgroundImage: `url('/images/doc4.JPG')`,
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center'
+                        backgroundPosition: 'center',
+                       
                     }}
                 >
                     <div className="absolute inset-0 bg-black/50" />
