@@ -8,6 +8,7 @@ import ConditionsPage from "./pages/ConditionsPage";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import TreatmentTemplatePage from "./pages/TreatmentTemplatePage";
+import { BlogTemplate } from "./pages/BlogTemplate";
 
 const useScrollToTop = () => {
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         <Route path="/treatments/:slug" element={<TreatmentTemplatePage />} />
         <Route path='/conditions' element={<ConditionsPage />} />
         <Route path='/blogs' element={<Blogs />} />
+        <Route path='/blog/:slug' element={<BlogTemplate />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </Layout>

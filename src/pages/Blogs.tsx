@@ -1,5 +1,41 @@
 import React from "react";
 import { motion } from 'framer-motion';
+import { BlogPost ,blogs } from "../utilities/blogs";
+import { Link } from "react-router-dom";
+
+const BlogCard: React.FC<{ blog: BlogPost }> = ({ blog }) => {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-1"
+      >
+        <Link to={`/blog/${blog.slug}`}>
+          <div className="relative h-48 w-full">
+            <img
+              src={blog.imagePath}
+              alt={blog.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-semibold mb-2 line-clamp-2">{blog.title}</h3>
+            <p className="text-gray-600 mb-4 line-clamp-3">{blog.summary}</p>
+            <div className="flex flex-wrap gap-2">
+              {blog.tags.slice(0, 3).map((tag, index) => (
+                <span
+                  key={index}
+                  className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </Link>
+      </motion.div>
+    );
+  };
 
 const Blogs: React.FC = () => {
     return (
@@ -51,6 +87,14 @@ const Blogs: React.FC = () => {
                             </motion.div>
                         </motion.div>
                     </div>
+                </div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 md:px-6 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {blogs.map((blog) => (
+                        <BlogCard key={blog.slug} blog={blog} />
+                    ))}
                 </div>
             </div>
         </div>
