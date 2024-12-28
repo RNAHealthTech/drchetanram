@@ -14,7 +14,6 @@ const AboutPage: React.FC = () => {
                         backgroundImage: `url('/images/doc4.JPG')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                       
                     }}
                 >
                     <div className="absolute inset-0 bg-black/50" />
