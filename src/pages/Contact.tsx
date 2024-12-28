@@ -1,7 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from 'framer-motion';
+import { useForm, ValidationError } from "@formspree/react";
 
 const Contact: React.FC = () => {
+
+    const [state, handleSubmit] = useForm('123xyz');
+    console.log(state);
+
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        date: '',
+        message: ''
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
+    const handleFinalSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        handleSubmit(formData);
+        handleWhatsAppSubmit();
+    };
+
+    const handleWhatsAppSubmit = () => {
+        const phoneNumber = '919599106813'; // Dr. Chetan's number without spaces or special characters
+
+        // Format the message for WhatsApp
+        const message = `Hello Dr. Chetan,\n\nNew appointment request:\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nPreferred Date: ${formData.date}\nQuery: ${formData.message}`;
+
+        // Encode the message for URL
+        const encodedMessage = encodeURIComponent(message);
+
+        // Create WhatsApp URL
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+    };
+
 
     return (
         <div className="relative">
@@ -32,7 +76,7 @@ const Contact: React.FC = () => {
                                 SCHEDULE A CONSULTATION
                             </h2>
                             <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-light leading-relaxed md:leading-tight px-2 md:px-0">
-                                SIR GANGARAM HOSPITAL
+                                SIR GANGA RAM HOSPITAL
                                 <br className="hidden md:block" />
                                 <span className="block mt-2 md:mt-0 md:inline">NEW DELHI</span>
                             </h1>
@@ -54,6 +98,118 @@ const Contact: React.FC = () => {
                     </div>
                 </div>
             </div>
+            {/* second section form and close up */}
+            <section id="contact-form" className="contact-form bg-white py-20">
+                <motion.div className="container mx-auto px-4">
+                    <motion.div className="max-w-6xl mx-auto">
+                        <motion.div className="flex flex-col lg:flex-row items-center">
+                            {/* Image section */}
+                            <motion.div className="w-full lg:w-1/2 lg:pl-8 mb-8 lg:mb-0 order-1 lg:order-2">
+                                <img
+                                    src="/images/contact-appointment.png"
+                                    alt="Doctor consultation"
+                                    className="rounded-lg w-full h-auto object-cover"
+                                />
+                            </motion.div>
+                            {/* Form section */}
+                            <motion.div className="w-full lg:w-1/2 lg:pr-8 order-2 lg:order-1">
+                                {state.succeeded ? (
+                                    <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 lg:mb-8 text-center lg:text-left mt-4 sm:mt-6 lg:mt-0 px-4 lg:px-0">
+                                        Your Form has been sent successfully!
+                                    </h3>
+                                ) : (
+                                    <motion.div>
+                                        <h3 className="text-3xl font-bold mb-8 text-center lg:text-left mt-8 lg:mt-0">Schedule Your  
+                                            <span className="text-amber-600">
+                                            {' '} Appointment
+                                            </span>
+                                            </h3>
+
+                                        <form onSubmit={handleFinalSubmit} className="space-y-6">
+                                            <motion.div className="mb-8">
+                                                <label htmlFor="name" className="block text-oxford-blue text-sm font-semibold mb-2">Name </label>
+                                                <input
+                                                    type="text"
+                                                    name="name"
+                                                    id="name"
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    required
+                                                    placeholder="Type Name"
+                                                    className="border-b border-platinum py-2 text-sm w-full"
+                                                />
+                                            </motion.div>
+
+                                            <motion.div className="mb-8">
+                                                <label htmlFor="phone" className="block text-oxford-blue text-sm font-semibold mb-2">Phone</label>
+                                                <input
+                                                    type="tel"
+                                                    name="phone"
+                                                    id="phone"
+                                                    value={formData.phone}
+                                                    onChange={handleChange}
+                                                    placeholder="Type Phone Number"
+                                                    className="border-b border-platinum py-2 text-sm w-full"
+                                                />
+                                            </motion.div>
+
+                                            <motion.div className="mb-8">
+                                                <label htmlFor="email" className="block text-oxford-blue text-sm font-semibold mb-2">Email Address </label>
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    id="email"
+                                                    required
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    placeholder="Type Email Address"
+                                                    className="border-b border-platinum py-2 text-sm w-full"
+                                                />
+                                                <ValidationError prefix="Email" field="email" errors={state.errors} />
+                                            </motion.div>
+                                            <motion.div className="mb-8">
+                                                <label htmlFor="date" className="block text-oxford-blue text-sm font-semibold mb-2">Date</label>
+                                                <input
+                                                    type="date"
+                                                    name="date"
+                                                    id="date"
+                                                    value={formData.date}
+                                                    onChange={handleChange}
+                                                    required
+                                                    placeholder="Select Date"
+                                                    className="border-b border-platinum py-2 text-sm w-full"
+                                                />
+                                                <ValidationError prefix="Date" field="date" errors={state.errors} />
+                                            </motion.div>
+
+                                            <motion.div className="mb-8">
+                                                <label htmlFor="message" className="block text-oxford-blue text-sm font-semibold mb-2">How can I help? </label>
+                                                <textarea
+                                                    name="message"
+                                                    id="message"
+                                                    placeholder="Type Description"
+                                                    value={formData.message}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="border-b border-platinum py-2 text-sm w-full max-h-72 min-h-24 h-24 resize-vertical"
+                                                ></textarea>
+                                            </motion.div>
+
+                                            <button
+                                                type="submit"
+                                                className="w-full bg-gray-900 text-white font-semibold py-3 px-6 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105"
+                                            >
+                                                Schedule Appointment
+                                            </button>
+                                        </form>
+                                    </motion.div>)}
+                            </motion.div>
+
+
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
+            </section>
         </div>
     )
 }

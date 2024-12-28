@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Menu, X, Phone, Siren } from 'lucide-react';
-import WhatsApp from './WhatsApp';
+import { Menu, X } from 'lucide-react';
 import WhatsAppModal from '../utilities/WhatsAppForm';
 
 
@@ -9,9 +8,10 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isBlinking, setIsBlinking] = useState(false);
+  
+  
 
-  const openModal = () => setIsModalOpen(true);
+  //const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   const navLinks = [
@@ -29,14 +29,10 @@ const Header: React.FC = () => {
     };
     window.addEventListener('scroll', handleScroll);
 
-    // Blinking effect for siren
-    const blinkInterval = setInterval(() => {
-      setIsBlinking(prev => !prev);
-    }, 500);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      clearInterval(blinkInterval);
+      
     };
   }, []);
 
@@ -49,7 +45,7 @@ const Header: React.FC = () => {
             <p className="hidden sm:block ml-2 text-sm text-white">Spine Specialist</p>
           </div> */}
           <div className="flex-shrink-0 flex flex-col sm:flex-row sm:items-center">
-            <h1 className="text-2xl font-bold text-white">Dr. Chetan Kumawat</h1>
+            <h1 className="text-2xl font-bold text-white">Dr. Chetan Ram</h1>
             <p className="text-sm text-white sm:ml-2">Spine Specialist</p>
           </div>
 
@@ -59,7 +55,7 @@ const Header: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
+                className="text-white hover:text-amber-600 px-3 py-2 rounded-md text-sm font-medium"
               >
                 {link.name}
               </a>
@@ -89,7 +85,7 @@ const Header: React.FC = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300 hover:bg-gray-800"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-amber-600 hover:bg-gray-800"
                 >
                   {link.name}
                 </a>

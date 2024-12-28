@@ -1,9 +1,44 @@
 import React from "react";
 import { motion } from 'framer-motion';
 
-const AboutPage: React.FC = () => {
+const AboutPage = () => {
+    const publications = [
+        "Management of avulsion fracture tibial spine by open reduction and Fixation an outcome study",
+        "Functional outcome of uncemented bipolar prosthesis in fracture neck of in elderly",
+        "Results Following Posterior Cervical Microforaminotomy and Discectomy using McCulloch Retractors for Cervical Radiculopathy",
+        "Early versus Delayed Ballon Kyphoplasty Intervention for Osteoporotic Vertebral Fracture Treatment",
+        "A Novel Technique for Basilar Invagination Treatment in a Patient with Klippel-Feil Syndrome",
+        "A New Minimally Invasive Technique for Thoracolumbar Focal Kyphosis Due to Osteoporotic Vertebral Fracture",
+        "Navigation-Guided C-arm Free MIS-TLIF: A Comparative Study on Cage Orientation and Screw Insertion Accuracy Against Conventional C-arm Assisted MIS-TLIF",
+        "C-arm Free Unilateral Biportal Endoscopic Discectomy: A Technical Note"
+    ];
+
+    const experiences = [
+        {
+            period: "Dec 2019 - Sep 2022",
+            role: "Consultant Orthopaedics and Spine Surgery",
+            location: "Sanjivani Hospital, Sirsa"
+        },
+        {
+            period: "Oct 2022 - Mar 2023",
+            role: "Consultant Spine Surgeon and Senior Resident Orthopedist",
+            location: "GIMS Greater Noida"
+        },
+        {
+            period: "2022",
+            role: "Consultant Spine Surgeon",
+            location: "SRS Hospital, Noida"
+        },
+        {
+            period: "May 2023 - Present",
+            role: "Consultant Spine Surgery Department",
+            location: "Sir Gangaram Hospital, New Delhi"
+        }
+    ];
+
     return (
         <div className="relative">
+            {/* Existing landing section remains unchanged */}
             <div className="relative min-h-[80vh]">
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -53,7 +88,137 @@ const AboutPage: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+
+            {/* Professional Journey Section */}
+            <section className="bg-gray-900 py-16 md:py-24">
+                <div className="max-w-7xl mx-auto px-4 md:px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-amber-500 text-3xl md:text-4xl font-light mb-6">Professional Journey</h2>
+                        <p className="text-white text-lg md:text-xl max-w-3xl mx-auto">
+                            With over a decade of medical excellence, Dr. Chetan Ram has established himself as a leading spine surgery specialist with international training and expertise.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {experiences.map((exp, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                className="bg-white p-6 rounded-lg shadow-xl"
+                            >
+                                <p className="text-amber-500 font-semibold mb-2">{exp.period}</p>
+                                <h3 className="text-gray-900 font-medium mb-2">{exp.role}</h3>
+                                <p className="text-gray-600">{exp.location}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Education & Training Section */}
+            <section className="bg-white py-16 md:py-24">
+                <div className="max-w-7xl mx-auto px-4 md:px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-gray-900 text-3xl md:text-4xl font-light mb-6">Education & Training</h2>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                            className="space-y-6"
+                        >
+                            <div className="border-l-4 border-amber-500 pl-4">
+                                <p className="text-gray-600">2024</p>
+                                <h3 className="text-gray-900 font-medium">Clinical Fellowship in Advanced Spine Surgery</h3>
+                                <p className="text-gray-600">Japan</p>
+                            </div>
+                            <div className="border-l-4 border-amber-500 pl-4">
+                                <p className="text-gray-600">2018-2019</p>
+                                <h3 className="text-gray-900 font-medium">Fellowship in Spine Surgery</h3>
+                                <p className="text-gray-600">Mumbai</p>
+                            </div>
+                            <div className="border-l-4 border-amber-500 pl-4">
+                                <p className="text-gray-600">2015-2018</p>
+                                <h3 className="text-gray-900 font-medium">M.S. Orthopaedics</h3>
+                                <p className="text-gray-600">Govt. Medical College Kota, Rajasthan</p>
+                            </div>
+                            <div className="border-l-4 border-amber-500 pl-4">
+                                <p className="text-gray-600">2008-2014</p>
+                                <h3 className="text-gray-900 font-medium">MBBS</h3>
+                                <p className="text-gray-600">SMS Medical College, Jaipur</p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                            className="bg-gray-900 p-6 rounded-lg"
+                        >
+                            <h3 className="text-amber-500 text-xl mb-4">Specialized Training</h3>
+                            <ul className="space-y-3 text-white">
+                                <li>Minimal Invasive Spine Course BOSC 2018</li>
+                                <li>Minimal Invasive Spine Course BOSC 2019</li>
+                                <li>Scoliosis Course in BSSCON 2022 Mumbai</li>
+                                <li>Observationship in Navigated TKR - New Delhi (2018)</li>
+                            </ul>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Publications Section */}
+            <section className="bg-gray-900 py-16 md:py-24">
+                <div className="max-w-7xl mx-auto px-4 md:px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-amber-500 text-3xl md:text-4xl font-light mb-6">Research Publications</h2>
+                        <p className="text-white text-lg md:text-xl max-w-3xl mx-auto">
+                            Contributing to the advancement of spine surgery through research and innovation
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {publications.map((pub, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                className="bg-white p-6 rounded-lg shadow-xl"
+                            >
+                                <p className="text-gray-900">{pub}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+ </div>
     )
 }
 
