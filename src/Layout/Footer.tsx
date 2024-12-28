@@ -12,8 +12,8 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="h-5 w-5 mr-2" />
-                <a href="tel:+919462292022" className="hover:text-gray-300">
-                  +91 94622 92022
+                <a href="tel:+919599106813" className="hover:text-gray-300">
+                  +91 9599106813
                 </a>
               </div>
               <div className="flex items-center">
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 mt-1" />
                 <p className="leading-relaxed">
-                  
+                  Room No  G-5, Sir Ganga Ram Hospital
                 </p>
               </div>
             </div>
@@ -36,9 +36,9 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="/about" className="hover:text-gray-300">About</a></li>
-              <li><a href="/services" className="hover:text-gray-300">Services</a></li>
-              <li><a href="/publications" className="hover:text-gray-300">Publications</a></li>
-              <li><a href="/blog" className="hover:text-gray-300">Blog</a></li>
+              <li><a href="/conditions" className="hover:text-gray-300">Conditions</a></li>
+              <li><a href="/treatments" className="hover:text-gray-300">Treatments</a></li>
+              <li><a href="/blogs" className="hover:text-gray-300">Blogs</a></li>
               <li><a href="/contact" className="hover:text-gray-300">Contact</a></li>
             </ul>
           </div>
@@ -48,30 +48,29 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Practice Hours</h3>
             <ul className="space-y-2">
               <li className="flex justify-between">
-                <span>Monday - Friday:</span>
-                <span>9:00 AM - 6:00 PM</span>
+                <span>Private OPD:</span>
+                <span>Mon - Sat 6:00 PM - 8:00 PM, Room No. G-5</span>
               </li>
               <li className="flex justify-between">
-                <span>Saturday:</span>
-                <span>9:00 AM - 2:00 PM</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Sunday:</span>
-                <span>Closed</span>
+                <span>General OPD:</span>
+                <span>Mon, Thur 9:00 AM - 11:00 AM, F - 33</span>
               </li>
             </ul>
           </div>
+
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
           <p className="text-sm text-gray-400">
             © {new Date().getFullYear()} Dr. Chetan Ram. All rights reserved.
+            <br />
+            Website by <a href="https://rnahealthtech.com" className="text-blue-500 hover:underline">RNA HealthTech</a>
           </p>
         </div>
+
       </div>
     </footer>
   );
 };
 
 export default Footer;
-        

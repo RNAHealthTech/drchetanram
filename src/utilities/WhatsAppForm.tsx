@@ -10,12 +10,10 @@ interface AppointmentModalProps {
 
 const WhatsAppModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) => {
   const [state, handleSubmit] = useForm('xxxxxx');
-  const [formData, setFormData] = useState({
-     
+  const [formData, setFormData] = useState({ 
     patient_name: '',
     phone: '',
     email: '',
-    location: '',
     date: '',
     text: '',
   });
@@ -29,7 +27,7 @@ const WhatsAppModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) => 
           patient_name: '',
           phone: '',
           email: '',
-          location: '', 
+          
           date: '',
           text: '',
         });
@@ -61,11 +59,11 @@ const WhatsAppModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) => 
     Patient Name: ${formData.patient_name}
     Phone: ${formData.phone}
     Email: ${formData.email}
-    Location: ${formData.location}
+     
     Date: ${formData.date}
     Message: ${formData.text}`;
 
-    const whatsappNumber = '91'; // Replace with your WhatsApp number
+    const whatsappNumber = '919599106813'; // Replace with your WhatsApp number
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
@@ -109,27 +107,9 @@ const WhatsAppModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) => 
                   <label htmlFor="date" className="block text-sm font-medium text-green-700">Preferred Date</label>
                   <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} required className="mt-1 block w-full border border-green-300 rounded-md shadow-sm p-2 bg-white text-green-900 focus:ring-2 focus:ring-green-400 focus:border-transparent" />
                 </div>
+                 
                 <div>
-                  <label htmlFor="location" className="block text-sm font-medium text-green-700">Preferred Location</label>
-                  <select
-                    id="location"
-                    name="location"
-                    value={formData.location}
-                    onChange={handleChange}
-                    required
-                    className="mt-1 block w-full border border-green-300 rounded-md shadow-sm p-2 bg-white text-green-900 focus:ring-2 focus:ring-green-400 focus:border-transparent"
-                  >
-                    <option value="">Select Appointment Location</option>
-                    <option value="bl-kapoor-hospital">BL Kapoor Hospital, Pusa road - Monday, Tuesday, Friday & Saturday - 2-4pm</option>
-                    <option value="rainbow-childrens-hospital">Rainbow Children's Hospital, Malviya nagar - Wednesday & Thursday 3-5pm</option>
-                    <option value="childrens-multispeciality-clinic">Children's Multispeciality Clinic, Vikaspuri - Saturday 10am-12pm</option>
-                    <option value="gauri-hospital">Gauri Hospital, Jawahar nagar - Tuesday & Friday 11am-12pm</option>
-                    <option value="aartas-clinishare">Aartas Clinishare, Lajpat Nagar - Wednesday & Friday 6-7pm</option>
-                    <option value="apollo-cradle">Apollo Cradle, Moti Nagar - Monday and Thursday 10am-12pm</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="text" className="block text-sm font-medium text-green-700">Message</label>
+                  <label htmlFor="text" className="block text-sm font-medium text-green-700">Complication</label>
                   <textarea id="text" name="text" rows={4} value={formData.text} onChange={handleChange} className="mt-1 block w-full border border-green-300 rounded-md shadow-sm p-2 bg-white text-green-900 focus:ring-2 focus:ring-green-400 focus:border-transparent"></textarea>
                 </div>
                 <div className="flex justify-end space-x-2">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from 'framer-motion';
 
-const ConditionsPage = () => {
+const ConditionsPage: React.FC = () => {
     const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
     const conditions = [
@@ -76,9 +76,7 @@ const ConditionsPage = () => {
             {/* Hero Section */}
             <div className="relative min-h-[90vh]">
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
+                    
                     className="absolute inset-0"
                     style={{
                         backgroundImage: `url('/images/conditions.jpg')`,
@@ -92,9 +90,7 @@ const ConditionsPage = () => {
                 <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-10vh)]">
                     <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20 text-center">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.5 }}
+                          
                             className="space-y-8 md:space-y-6"
                         >
                             <h2 className="text-white text-lg md:text-xl tracking-wider mb-4 md:mb-0">
