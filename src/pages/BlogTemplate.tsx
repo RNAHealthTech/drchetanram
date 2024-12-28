@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
 import { Link, useParams } from 'react-router-dom';
-import { BlogPost, blogs } from '../utilities/blogs';
+import { blogs } from '../utilities/blogs';
 import { marked } from 'marked';
 
 export const BlogTemplate: React.FC = () => {
@@ -9,7 +9,21 @@ export const BlogTemplate: React.FC = () => {
   const blog = blogs.find(b => b.slug === slug);
   const [parsedContent, setParsedContent] = useState('');
 
-  
+  useEffect(() => {
+    const parseContent = async () => {
+      if (blog) {
+        try {
+          const parsed = await marked(blog.content);
+          setParsedContent(parsed);
+        } catch (error) {
+          console.error('Error parsing markdown:', error);
+          setParsedContent('Error loading content');
+        }
+      }
+    };
+
+    parseContent();
+  }, [blog]);
 
   if (!blog) {
     return (
