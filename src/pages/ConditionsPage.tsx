@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { motion } from 'framer-motion';
+import AppointmentModal from "../utilities/AppointmentModal";
 
 const ConditionsPage: React.FC = () => {
     const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     const conditions = [
         {
@@ -76,7 +82,7 @@ const ConditionsPage: React.FC = () => {
             {/* Hero Section */}
             <div className="relative min-h-[90vh]">
                 <motion.div
-                    
+
                     className="absolute inset-0"
                     style={{
                         backgroundImage: `url('/images/conditions.jpg')`,
@@ -90,7 +96,7 @@ const ConditionsPage: React.FC = () => {
                 <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-10vh)]">
                     <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20 text-center">
                         <motion.div
-                          
+
                             className="space-y-8 md:space-y-6"
                         >
                             <h2 className="text-white text-lg md:text-xl tracking-wider mb-4 md:mb-0">
@@ -116,11 +122,10 @@ const ConditionsPage: React.FC = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className={`p-6 text-center rounded-lg transition-all duration-300 ${
-                                    activeCategory === category.category 
-                                    ? 'bg-amber-500 text-white' 
-                                    : 'bg-white text-gray-900 hover:bg-amber-50'
-                                }`}
+                                className={`p-6 text-center rounded-lg transition-all duration-300 ${activeCategory === category.category
+                                        ? 'bg-amber-500 text-white'
+                                        : 'bg-white text-gray-900 hover:bg-amber-50'
+                                    }`}
                                 onClick={() => setActiveCategory(category.category)}
                             >
                                 <h3 className="text-lg font-medium">{category.category}</h3>
@@ -133,8 +138,8 @@ const ConditionsPage: React.FC = () => {
 
             {/* Conditions Sections */}
             {conditions.map((category, idx) => (
-                <section 
-                    key={idx} 
+                <section
+                    key={idx}
                     className={`py-16 md:py-24 ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-900'}`}
                     id={category.category.toLowerCase().replace(/\s+/g, '-')}
                 >
@@ -175,7 +180,7 @@ const ConditionsPage: React.FC = () => {
                                         <p className={idx % 2 === 0 ? 'text-gray-600' : 'text-gray-300'}>
                                             {condition.description}
                                         </p>
-                                        
+
                                         <div className="space-y-4">
                                             <div>
                                                 <h4 className={`text-lg font-medium mb-2 ${idx % 2 === 0 ? 'text-gray-900' : 'text-white'}`}>
@@ -189,7 +194,7 @@ const ConditionsPage: React.FC = () => {
                                                     ))}
                                                 </ul>
                                             </div>
-                                            
+
                                             <div>
                                                 <h4 className={`text-lg font-medium mb-2 ${idx % 2 === 0 ? 'text-gray-900' : 'text-white'}`}>
                                                     Risk Factors
@@ -225,12 +230,13 @@ const ConditionsPage: React.FC = () => {
                         <p className="text-white text-lg md:text-xl max-w-3xl mx-auto">
                             Don't let spine conditions affect your quality of life. Schedule a consultation for expert diagnosis and treatment.
                         </p>
-                        <button className="bg-white text-amber-500 px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition duration-300">
+                        <button onClick={openModal} className="bg-white text-amber-500 px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition duration-300">
                             Book Consultation
                         </button>
                     </motion.div>
                 </div>
             </section>
+            <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
     );
 };

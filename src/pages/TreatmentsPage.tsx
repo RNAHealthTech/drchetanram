@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 import { treatments } from '../utilities/data';
+import AppointmentModal from "../utilities/AppointmentModal";
 
 const TreatmentsPage: React.FC = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className="relative">
       {/* Hero Section */}
@@ -67,9 +74,8 @@ const TreatmentsPage: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: procIdx * 0.2 }}
                     viewport={{ once: true }}
-                    className={`group h-full rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 ${
-                      idx % 2 === 0 ? 'bg-white' : 'bg-gray-800'
-                    }`}
+                    className={`group h-full rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-800'
+                      }`}
                   >
                     <div className="relative h-48">
                       <img
@@ -114,11 +120,12 @@ const TreatmentsPage: React.FC = () => {
             <p className="text-white text-lg md:text-xl max-w-3xl mx-auto">
               Schedule a consultation to discuss your condition and explore the most suitable treatment options.
             </p>
-            <button className="bg-white text-amber-500 px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition duration-300">
+            <button onClick={openModal} className="bg-white text-amber-500 px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition duration-300">
               Book Consultation
             </button>
           </motion.div>
         </div>
+        <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
       </section>
     </div>
   );

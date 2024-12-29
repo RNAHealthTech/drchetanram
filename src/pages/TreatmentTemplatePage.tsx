@@ -2,11 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { treatments, type Procedure } from '../utilities/data';
 import { motion } from 'framer-motion';
+import AppointmentModal from '../utilities/AppointmentModal';
 
 const TreatmentTemplatePage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const [procedure, setProcedure] = useState<Procedure | null>(null);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   useEffect(() => {
     // Find the procedure across all treatment categories
@@ -106,10 +112,11 @@ const TreatmentTemplatePage: React.FC = () => {
             <p className="text-white text-sm sm:text-base mb-4 sm:mb-6">
               Schedule a consultation to discuss if this treatment is right for you.
             </p>
-            <button className="bg-white text-amber-500 px-6 sm:px-8 py-2 sm:py-3 rounded-lg hover:bg-gray-100 transition duration-300 text-sm sm:text-base font-medium">
+            <button onClick={openModal} className="bg-white text-amber-500 px-6 sm:px-8 py-2 sm:py-3 rounded-lg hover:bg-gray-100 transition duration-300 text-sm sm:text-base font-medium">
               Book Consultation
             </button>
           </motion.div>
+          <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
         </motion.div>
       </div>
     </div>

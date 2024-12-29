@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import TreatmentsSection from "./TreatmentsSection";
 import VideoTestimonials from "./VideoTestimonials";
+import AppointmentModal from "../utilities/AppointmentModal";
 
 const HomePage: React.FC = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     const navigate = useNavigate();
 
@@ -51,7 +57,7 @@ const HomePage: React.FC = () => {
                                 transition={{ duration: 0.5, delay: 1 }}
                                 className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-4 mt-10 md:mt-8"
                             >
-                                <button className="w-full md:w-auto bg-white text-black hover:bg-gray-200 px-4 py-2 md:px-8 md:py-4 text-lg">
+                                <button onClick={openModal} className="w-full md:w-auto bg-white text-black hover:bg-gray-200 px-4 py-2 md:px-8 md:py-4 text-lg">
                                     Schedule an Appointment
                                 </button>
                                 <button className="w-full md:w-auto text-white border border-white hover:bg-white hover:text-black px-4 py-2 md:px-8 md:py-4 text-lg mt-4 md:mt-0">
@@ -80,6 +86,8 @@ const HomePage: React.FC = () => {
                     </div>
                 </motion.div>
             </div>
+
+            <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
 
             <section className="relative py-24">
                 {/* Curved background lines */}
@@ -289,7 +297,7 @@ const HomePage: React.FC = () => {
                         <p className="text-white text-lg md:text-xl max-w-3xl mx-auto">
                             Schedule a consultation to discuss your condition and explore the most suitable treatment options.
                         </p>
-                        <button className="bg-white text-amber-500 px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition duration-300">
+                        <button onClick={openModal} className="bg-white text-amber-500 px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition duration-300">
                             Book Consultation
                         </button>
                     </motion.div>
