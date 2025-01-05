@@ -18,8 +18,8 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 mr-2" />
-                <a href="mailto:dr.ckumawat@gmail.com" className="hover:text-gray-300">
-                  dr.ckumawat@gmail.com
+                <a href="mailto:ckumawatdr@gmail.com" className="hover:text-gray-300">
+                   ckumawatdr@gmail.com
                 </a>
               </div>
               <div className="flex items-start">

@@ -63,7 +63,7 @@ const AboutPage = () => {
                             className="space-y-8 md:space-y-6"
                         >
                             <h2 className="text-white text-lg md:text-xl tracking-wider mb-4 md:mb-0">
-                                MEET DR. CHETAN RAM
+                                MEET DR. CHETAN RAM KUMAWAT
                             </h2>
                             <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-light leading-relaxed md:leading-tight px-2 md:px-0">
                                 INTERNATIONALLY TRAINED

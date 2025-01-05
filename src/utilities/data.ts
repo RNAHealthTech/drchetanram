@@ -49,6 +49,14 @@ export interface Procedure {
       slug: "advanced-spine-surgeries",
       procedures: [
         {
+          title: "OLIF (Oblique Lateral Interbody Fusion)",
+          slug: "oblique-lateral-interbody-fusion",
+          description: "Advanced minimally invasive surgical technique that approaches the spine from an oblique angle to perform spinal fusion, offering reduced muscle disruption and faster recovery compared to traditional approaches.",
+          conditions: ["Degenerative Disc Disease", "Spondylolisthesis", "Spinal Stenosis", "Adult Spinal Deformity"],
+          imagePath: "/images/olif.jpeg",
+          details: "OLIF (Oblique Lateral Interbody Fusion) is an innovative surgical technique that provides access to the spine through a natural corridor between major blood vessels and psoas muscle. This approach minimizes tissue disruption and offers several advantages including reduced operative time, less blood loss, and potentially faster recovery. The procedure is particularly effective for treating conditions affecting the lower spine (L2-L5) and can be combined with other minimally invasive techniques for optimal outcomes."
+        },
+        {
           title: "Spinal Fusion Surgery",
           slug: "spinal-fusion-surgery",
           description: "Surgical procedure that permanently connects two or more vertebrae to improve stability, correct deformity, or reduce pain.",

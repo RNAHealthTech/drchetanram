@@ -8,7 +8,7 @@ import AppointmentModal from "../utilities/AppointmentModal";
 const HomePage: React.FC = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    
+
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
@@ -80,7 +80,7 @@ const HomePage: React.FC = () => {
                         <div className="text-center">Sir Ganga Ram Hospital, New Delhi</div>
                         <div className="text-center md:text-right">
                             <a href="mailto:dr.ckumawat@gmail.com" className="hover:text-gray-300">
-                                dr.ckumawat@gmail.com
+                                ckumawatdt@gmail.com
                             </a>
                         </div>
                     </div>
@@ -232,19 +232,19 @@ const HomePage: React.FC = () => {
                                     </div>
                                 </div>
 
-                                <button
-                                    onClick={() => navigate("/conditions")}
-                                    className="mt-8 bg-amber-500 text-white rounded-lg px-8 py-4 text-lg hover:bg-amber-600 transition duration-300"
-                                >
-                                    View All Conditions
-                                </button>
+                                <div className="md:block flex justify-center w-full">
+                                    <button
+                                        onClick={() => navigate("/conditions")}
+                                        className="mt-8 bg-amber-500 text-white rounded-lg px-8 py-4 text-lg hover:bg-amber-600 transition duration-300"
+                                    >
+                                        View All Conditions
+                                    </button>
+                                </div>
                             </div>
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, x: 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
+
                             viewport={{ once: true }}
                             className="relative"
                         >
