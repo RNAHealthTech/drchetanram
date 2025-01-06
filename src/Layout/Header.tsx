@@ -38,8 +38,8 @@ const Header: React.FC = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex flex-col sm:flex-row sm:items-center">
-            <h1 className="text-2xl font-bold text-white">Dr. Chetan Ram Kumawat</h1>
-            <p className="text-sm text-white sm:ml-2">Spine Specialist</p>
+            <h1 className="text-xl md:text-2xl font-bold text-white">Dr. Chetan Ram Kumawat</h1>
+            <p className="text-sm text-white ml-2">Spine Specialist</p>
           </div>
 
           {/* Desktop Navigation */}
