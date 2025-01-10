@@ -80,7 +80,7 @@ const HomePage: React.FC = () => {
                         <div className="text-center">Sir Ganga Ram Hospital, New Delhi</div>
                         <div className="text-center md:text-right">
                             <a href="mailto:dr.ckumawat@gmail.com" className="hover:text-gray-300">
-                                ckumawatdt@gmail.com
+                                ckumawatdr@gmail.com
                             </a>
                         </div>
                     </div>
