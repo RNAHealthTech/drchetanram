@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
                     transition={{ duration: 1 }}
                     className="absolute inset-0"
                     style={{
-                        backgroundImage: `url('/images/bg2.jpg')`,
+                        backgroundImage: `url('/images/landing.jpg')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}
