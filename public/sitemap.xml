@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+        <loc>https://drchetanspinesurgeon.com/</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/about</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/contact</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/treatments</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/treatments/endoscopic-spine-surgery</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/treatments/microdiscectomy</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/treatments/kyphoplasty-vertebroplasty</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/treatments/oblique-lateral-interbody-fusion</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/treatments/spinal-fusion-surgery</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/treatments/cervical-disc-replacement</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/treatments/complex-spine-deformity-correction</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/treatments/spine-trauma-surgery</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/treatments/spinal-tumor-surgery</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/conditions</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/blogs</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/blog/</loc>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/images</loc>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/about-bg.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>about-bg.png</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/back1.jpeg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>back1.jpeg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/bg.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>bg.JPG</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/bg.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>bg.png</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/bg2.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>bg2.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/cervical_disc.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>cervical_disc.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/complex_deformity.webp</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>complex_deformity.webp</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/conditions.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>conditions.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/contact-appointment.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>contact-appointment.png</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/contact.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>contact.png</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/degnerative.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>degnerative.png</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/disc.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>disc.png</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/doc1.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>doc1.JPG</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/doc2.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>doc2.JPG</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/doc3.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>doc3.JPG</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/doc4.JPG</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>doc4.JPG</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/endoscopic_surgery.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>endoscopic_surgery.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/image1.webp</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>image1.webp</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/image2.webp</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>image2.webp</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/landing.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>landing.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/logo.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>logo.png</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/logo.svg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>logo.svg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/microdiscectomy.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>microdiscectomy.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/olif.jpeg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>olif.jpeg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/scoliosis.webp</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>scoliosis.webp</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spinalcordinjury.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>spinalcordinjury.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spinalstenosis.webp</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>spinalstenosis.webp</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spine1.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>spine1.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spine_fusion.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>spine_fusion.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spine_truama.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>spine_truama.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spine_tumor.jpeg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>spine_tumor.jpeg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spondylolisthesis.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>spondylolisthesis.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/treatments.jpeg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>treatments.jpeg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/truama.jpg</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>truama.jpg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/vertebral.png</image:loc>
+            <image:caption>Image from our gallery</image:caption>
+            <image:title>vertebral.png</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://drchetanspinesurgeon.com/gallery</loc>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/about-bg.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/back1.jpeg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/bg.JPG</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/bg.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/bg2.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/cervical_disc.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/complex_deformity.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/conditions.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/contact-appointment.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/contact.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/degnerative.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/disc.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/doc1.JPG</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/doc2.JPG</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/doc3.JPG</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/doc4.JPG</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/endoscopic_surgery.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/image1.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/image2.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/landing.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/logo.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/logo.svg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/microdiscectomy.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/olif.jpeg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/scoliosis.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spinalcordinjury.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spinalstenosis.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spine1.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spine_fusion.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spine_truama.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spine_tumor.jpeg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/spondylolisthesis.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/treatments.jpeg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/truama.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://drchetanspinesurgeon.com//images/vertebral.png</image:loc>
+        </image:image>
+    </url>
+</urlset>
