@@ -155,7 +155,7 @@ const HomePage: React.FC = () => {
                             >
                                 <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
                                     <img
-                                        src="/images/doc3.JPG"
+                                        src="/images/doc3.jpg"
                                         alt="Medical consultation"
                                         className="w-full h-full object-cover"
                                     />
@@ -168,7 +168,7 @@ const HomePage: React.FC = () => {
                                 className="aspect-square bg-gray-100 rounded-lg overflow-hidden"
                             >
                                 <img
-                                    src="/images/doc1.JPG"
+                                    src="/images/doc1.jpg"
                                     alt="Surgical procedure"
                                     className="w-full h-full object-cover"
                                 />
@@ -178,7 +178,7 @@ const HomePage: React.FC = () => {
                                 className="aspect-square bg-gray-100 rounded-lg overflow-hidden"
                             >
                                 <img
-                                    src="/images/doc2.JPG"
+                                    src="/images/doc2.jpg"
                                     alt="Medical imaging review"
                                     className="w-full h-full object-cover"
                                 />
