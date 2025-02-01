@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import TreatmentsSection from "./TreatmentsSection";
 import VideoTestimonials from "./VideoTestimonials";
 import AppointmentModal from "../utilities/AppointmentModal";
+import VideoSection from "../utilities/VideoSection";
 
 const HomePage: React.FC = () => {
 
@@ -40,7 +41,7 @@ const HomePage: React.FC = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.5 }}
-                            className="space-y-8 md:space-y-6" // Increased spacing on mobile
+                            className="space-y-8 md:space-y-6"  
                         >
                             <h2 className="text-white text-lg md:text-xl tracking-wider mb-4 md:mb-0">
                                 THE PRACTICE
@@ -187,6 +188,8 @@ const HomePage: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            <VideoSection />
 
             {/* New Conditions Section */}
             <section className="py-24 bg-gray-900">
