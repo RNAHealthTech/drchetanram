@@ -9,6 +9,7 @@ import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import TreatmentTemplatePage from "./pages/TreatmentTemplatePage";
 import { BlogTemplate } from "./pages/BlogTemplate";
+import { HelmetProvider } from "react-helmet-async";
 
 const useScrollToTop = () => {
   const { pathname } = useLocation();
@@ -22,6 +23,7 @@ const App: React.FC = () => {
   useScrollToTop();
 
   return (
+    <HelmetProvider>
     <Layout>
       <Routes>
         <Route path='/' element={<Home />} />
@@ -34,6 +36,7 @@ const App: React.FC = () => {
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </Layout>
+    </HelmetProvider>
   )
 }
 

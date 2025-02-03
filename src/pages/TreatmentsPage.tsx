@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 import { treatments } from '../utilities/data';
 import AppointmentModal from "../utilities/AppointmentModal";
+import { Helmet } from "react-helmet-async";
 
 const TreatmentsPage: React.FC = () => {
 
@@ -12,6 +13,52 @@ const TreatmentsPage: React.FC = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
+    <>
+     <Helmet>
+      {/* Primary Meta Tags */}
+      <title>Advanced Back & Spine Treatments | Minimally Invasive Surgery Options</title>
+      <meta name="description" content="Discover modern back pain treatments and minimally invasive spine surgery options. Expert care from experienced back doctors and spine specialists for all types of back problems." />
+      
+      {/* Keywords Meta Tag */}
+      <meta name="keywords" content="back pain treatment, spine surgery, back doctor, spine specialist, minimally invasive back surgery, back pain relief, spine care, back specialist, spine doctor" />
+      
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Back Pain Treatments & Spine Surgery Options | Expert Care" />
+      <meta property="og:description" content="Find relief with advanced back pain treatments and minimally invasive spine surgery. Expert back doctors providing comprehensive spine care solutions." />
+      <meta property="og:image" content="/images/treatments.jpeg" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Back Pain & Spine Treatment Solutions" />
+      <meta name="twitter:description" content="Advanced treatments for back pain and spine conditions. Minimally invasive options from expert back specialists." />
+      
+      {/* Schema Markup for Medical Treatments */}
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "MedicalWebPage",
+            "about": {
+              "@type": "MedicalProcedure",
+              "name": "Spine Treatments and Back Pain Solutions",
+              "description": "Advanced medical procedures for back pain and spine conditions",
+              "medicalSpecialty": "Orthopedic Surgery"
+            },
+            "mainEntity": {
+              "@type": "MedicalTherapy",
+              "name": "Minimally Invasive Spine Surgery",
+              "description": "Modern surgical techniques for back pain treatment with faster recovery",
+              "relevantSpecialty": "Spine Surgery",
+              "MedicalSpecialty": "Orthopedic Surgery"
+            },
+            "medicalAudience": "Patient",
+            "specialty": ["Back Pain Treatment", "Spine Surgery", "Orthopedics"]
+          }
+        `}
+      </script>
+    </Helmet>
+
     <div className="relative">
       {/* Hero Section */}
       <div className="relative min-h-[80vh]">
@@ -128,6 +175,7 @@ const TreatmentsPage: React.FC = () => {
         <AppointmentModal isOpen={isModalOpen} onClose={closeModal} />
       </section>
     </div>
+    </>
   );
 };
 

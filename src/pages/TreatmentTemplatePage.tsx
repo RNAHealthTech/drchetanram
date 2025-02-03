@@ -3,6 +3,84 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { treatments, type Procedure } from '../utilities/data';
 import { motion } from 'framer-motion';
 import AppointmentModal from '../utilities/AppointmentModal';
+import { Helmet } from 'react-helmet-async';
+
+// Helper function to generate alternative titles for medical terms
+const getLaymanTerms = (title: string): string[] => {
+  const termMappings: Record<string, string[]> = {
+    "Endoscopic Spine Surgery": ["minimally invasive back surgery", "small-incision spine surgery", "camera-guided back surgery"],
+    "Microdiscectomy": ["herniated disc surgery", "pinched nerve surgery", "back pain surgery"],
+    "Kyphoplasty": ["vertebrae fracture treatment", "spine fracture surgery", "broken back treatment"],
+    "Vertebroplasty": ["spine compression treatment", "vertebrae repair", "broken spine surgery"],
+    "OLIF": ["side-entry spine surgery", "minimally invasive lower back surgery"],
+    "Spinal Fusion Surgery": ["spine joining surgery", "vertebrae connection surgery", "back bone fusion"],
+    "Cervical Disc Replacement": ["artificial neck disc surgery", "neck disc replacement", "cervical spine disc surgery"],
+    "Complex Spine Deformity Correction": ["spine straightening surgery", "scoliosis correction", "spine alignment surgery"],
+    "Spine Trauma Surgery": ["emergency back surgery", "spine injury surgery", "accident-related spine surgery"],
+    "Spinal Tumor Surgery": ["spine cancer surgery", "back tumor removal", "spinal growth removal"]
+  };
+
+  return termMappings[title] || [title];
+};
+
+const SEOTreatmentTemplate: React.FC<{ procedure: Procedure }> = ({ procedure }) => {
+  const alternativeTerms = getLaymanTerms(procedure.title);
+  const keywords = [
+    procedure.title,
+    ...alternativeTerms,
+    'spine doctor',
+    'back doctor',
+    'spine specialist',
+    'back pain treatment',
+    ...procedure.conditions.map(c => c.toLowerCase()),
+    'spine surgery',
+    'back surgery'
+  ].join(', ');
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": procedure.title,
+    "alternateName": alternativeTerms,
+    "description": procedure.description,
+    "medicalCondition": procedure.conditions.map(condition => ({
+      "@type": "MedicalCondition",
+      "name": condition
+    })),
+    "image": procedure.imagePath,
+    "procedureType": "Surgical"
+  };
+
+  return (
+    <Helmet>
+      {/* Primary Meta Tags */}
+      <title>{`${procedure.title} - Expert Back & Spine Treatment | Modern Spine Care`}</title>
+      <meta name="description" content={`Learn about ${procedure.title.toLowerCase()} - a ${alternativeTerms[0]}. Treat conditions like ${procedure.conditions.join(', ')}. Expert spine care with minimal recovery time.`} />
+      
+      {/* Keywords */}
+      <meta name="keywords" content={keywords} />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content={`${procedure.title} - Advanced Spine Treatment`} />
+      <meta property="og:description" content={`Suffering from ${procedure.conditions[0].toLowerCase()}? Learn how ${alternativeTerms[0]} can help you recover faster with minimal pain.`} />
+      <meta property="og:image" content={procedure.imagePath} />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={`${procedure.title} - Modern Spine Treatment`} />
+      <meta name="twitter:description" content={`Expert ${alternativeTerms[0]} for ${procedure.conditions[0].toLowerCase()}. Learn about this advanced treatment option.`} />
+      <meta name="twitter:image" content={procedure.imagePath} />
+
+      {/* Schema.org markup */}
+      <script type="application/ld+json">
+        {JSON.stringify(schemaData)}
+      </script>
+    </Helmet>
+  );
+};
+
+
 
 const TreatmentTemplatePage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -38,6 +116,8 @@ const TreatmentTemplatePage: React.FC = () => {
   }
 
   return (
+    <>
+    <SEOTreatmentTemplate procedure={procedure} />
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="relative h-[30vh] sm:h-[40vh] md:h-[50vh]">
@@ -120,6 +200,7 @@ const TreatmentTemplatePage: React.FC = () => {
         </motion.div>
       </div>
     </div>
+    </>
   );
 };
 
