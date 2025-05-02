@@ -40,14 +40,16 @@ const AboutPage = () => {
     return (
         <>
             <Helmet>
-                <title>Dr. Chetan Ram - Back Pain Expert | International Spine Surgeon in Delhi</title>
-                <meta name="description" content="Meet Dr. Chetan Ram - Japan-trained back specialist in Delhi with 10+ years experience. Expert in minimally invasive spine surgery, advanced treatments for back pain, slip disc & spine problems." />
+                <title>Spine Surgeon in Delhi | Dr Chetan Ram | Ganga Ram Hospital</title>
+                <meta name="description" content="Dr Chetan Ram is a leading Spine Surgeon in Sir Ganga Ram Hospital with over 10+ years of
+experience. Contact now for appointment." />
 
                 {/* OpenGraph Tags */}
-                <meta property="og:title" content="Dr. Chetan Ram - International Spine Surgeon & Back Pain Expert" />
-                <meta property="og:description" content="Internationally trained back specialist in Delhi. Advanced spine treatments with minimally invasive techniques. Japanese fellowship trained surgeon for back pain, slip disc & spine problems." />
+                <meta property="og:title" content="Spine Surgeon in Delhi | Dr Chetan Ram | Ganga Ram Hospital" />
+                <meta property="og:description" content="Dr Chetan Ram is a leading Spine Surgeon in Sir Ganga Ram Hospital with over 10+ years of
+experience. Contact now for appointment." />
                 <meta property="og:type" content="profile" />
-                <meta property="og:image" content="https://yourwebsite.com/images/doc4.JPG" />
+                <meta property="og:image" content="https://drchetanspinesurgeon.com/images/doc4.JPG" />
 
                 {/* Additional SEO Keywords */}
                 <meta name="keywords" content="Dr Chetan Ram, spine surgeon delhi, back specialist, japan trained surgeon, minimally invasive spine surgery, spine doctor qualifications, best back doctor delhi" />
@@ -134,7 +136,7 @@ const AboutPage = () => {
                                 <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-light leading-relaxed md:leading-tight px-2 md:px-0">
                                     INTERNATIONALLY TRAINED
                                     <br className="hidden md:block" />
-                                    <span className="block mt-2 md:mt-0 md:inline">SPINE SURGERY SPECIALIST</span>
+                                    <span className="block mt-2 md:mt-0 md:inline">SPINE SURGEON IN DELHI</span>
                                 </h1>
 
                                 <motion.div
@@ -167,7 +169,9 @@ const AboutPage = () => {
                         >
                             <h2 className="text-amber-500 text-3xl md:text-4xl font-light mb-6">Professional Journey</h2>
                             <p className="text-white text-lg md:text-xl max-w-3xl mx-auto">
-                                With over a decade of medical excellence, Dr. Chetan Ram has established himself as a leading spine surgery specialist with international training and expertise.
+                                Dr Chetan Ram is one of the most trusted spine surgeon in Delhi. Currently practicing as consultant
+                                at Sir Ganga Ram Hospital, the internationally trained surgeon has successfully conducted thousands
+                                of surgeries.
                             </p>
                         </motion.div>
 

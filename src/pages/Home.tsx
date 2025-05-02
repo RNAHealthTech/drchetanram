@@ -5,7 +5,7 @@ import TreatmentsSection from "./TreatmentsSection";
 import VideoTestimonials from "./VideoTestimonials";
 import AppointmentModal from "../utilities/AppointmentModal";
 import VideoSection from "../utilities/VideoSection";
-import {  Helmet }  from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const HomePage: React.FC = () => {
 
@@ -20,20 +20,18 @@ const HomePage: React.FC = () => {
         <>
             <Helmet>
                 {/* Basic Meta Tags */}
-                <title>Dr. Chetan Ram - Back Pain & Spine Specialist in Delhi | Best Back Doctor</title>
-                <meta name="description" content="Looking for the best back pain doctor in Delhi? Dr. Chetan Ram is a renowned spine specialist treating back pain, neck pain, slipped disc & sciatica. World-class spine surgery with minimally invasive techniques at Sir Ganga Ram Hospital." />
+                <title>Best Spine Surgeon & Back Pain doctor in Ganga Ram Hospital</title>
+                <meta name="description" content="Best spine surgeon in Delhi NCR. Experience of 10+ years in spine surgeries related to back pain. Call
+the consultant at SGRH now." />
 
                 {/* OpenGraph Tags for Social Media */}
-                <meta property="og:title" content="Best Back Pain Doctor in Delhi - Dr. Chetan Ram | Spine Specialist" />
-                <meta property="og:description" content="Expert back pain treatment and spine surgery in Delhi. Specialized care for slip disc, sciatica, neck pain and back problems using advanced minimally invasive techniques." />
+                <meta property="og:title" content="Best Spine Surgeon & Back Pain doctor in Ganga Ram Hospital" />
+                <meta property="og:description" content="Best spine surgeon in Delhi NCR. Experience of 10+ years in spine surgeries related to back pain. Call
+the consultant at SGRH now." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://yourwebsite.com" />
-                <meta property="og:image" content="https://yourwebsite.com/images/doc3.jpg" />
+                <meta property="og:url" content="https://drchetanspinesurgeon.com" />
+                <meta property="og:image" content="https://drchetanspinesurgeon.com.com/images/doc3.jpg" />
 
-                {/* Twitter Card Tags */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Back Pain Treatment in Delhi | Dr. Chetan Ram - Spine Expert" />
-                <meta name="twitter:description" content="Get relief from back pain, neck pain & spine problems. Advanced spine treatment with minimally invasive surgery by top back specialist in Delhi." />
 
                 {/* Additional SEO Keywords */}
                 <meta name="keywords" content="back doctor delhi, spine specialist, back pain treatment, slip disc doctor, sciatica treatment, neck pain doctor, spine surgery delhi, best spine surgeon, back specialist, minimally invasive spine surgery" />
@@ -49,7 +47,7 @@ const HomePage: React.FC = () => {
           "@context": "https://schema.org",
           "@type": "MedicalBusiness",
           "name": "Dr. Chetan Ram - Spine Specialist",
-          "image": "https://https://drchetanspinesurgeon.com/images/doc3.jpg",
+          "image": "https://drchetanspinesurgeon.com/images/doc3.jpg",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Sir Ganga Ram Hospital",
@@ -139,7 +137,7 @@ const HomePage: React.FC = () => {
                                 className="space-y-8 md:space-y-6"
                             >
                                 <h2 className="text-white text-lg md:text-xl tracking-wider mb-4 md:mb-0">
-                                    THE PRACTICE
+                                    Best Spine Care & Internationally Trained Orthopaedic Surgeon
                                 </h2>
                                 <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-light leading-relaxed md:leading-tight px-2 md:px-0">
                                     ADVANCED SPINE CARE FROM
@@ -213,20 +211,27 @@ const HomePage: React.FC = () => {
 
                                 <div className="space-y-4">
                                     <h2 className="text-4xl lg:text-5xl font-light text-gray-900">
-                                        A Dynamic Approach with
-                                        <span className="block text-amber-600">an Innovative Vision</span>
+                                        Specialized
+                                        <span className="block text-amber-600">Spine Care</span>
                                     </h2>
 
                                     <p className="text-gray-600 leading-relaxed">
-                                        With extensive experience in minimally invasive spine surgery and the latest technological advancements, Dr. Chetan Ram remains at the forefront of spine care innovation. His approach combines cutting-edge surgical techniques with a deep commitment to patient well-being.
+                                        A consultant at Sir Ganga Ram Hospital at Karol Bagh, Dr Chetan Ram is one of the best spine
+                                        surgeons in Delhi with experience of over a decade. Specialized in advanced spine surgery in Japan
+                                        and trained across prestigious hospitals &amp; institutes in India, the orthopaedic surgeon brings reliable
+                                        spinal care to his patients.
                                     </p>
 
                                     <p className="text-gray-600 leading-relaxed">
-                                        Drawing from his international training and expertise gained from his fellowship in Japan, Dr. Ram specializes in advanced spine surgery procedures while maintaining a patient-centered focus. His dedication to utilizing navigation-guided and minimally invasive techniques ensures optimal outcomes with faster recovery times.
+                                        His expertise in minimally-invasive procedures ensures effective treatment and faster recovery after
+                                        the surgery. The experience of working with thousands of patients over the years also leads to the
+                                        understanding of the patient’s conditions and the procedures required for treatment.
                                     </p>
 
                                     <p className="text-gray-600 leading-relaxed">
-                                        Each treatment plan is carefully tailored to meet individual patient needs, supported by his extensive research contributions and clinical experience in complex spine disorders. Dr. Ram and his team are committed to providing comprehensive spine care that enhances patients' quality of life.
+                                        Whether it is a complex spine disorder or discomfort arising from injuries, the conversation before
+                                        the procedure and the right questions help in accurate diagnosis and the best way forward to
+                                        resolve the issue.
                                     </p>
 
                                 </div>
@@ -252,7 +257,7 @@ const HomePage: React.FC = () => {
                                     <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
                                         <img
                                             src="/images/doc3.jpg"
-                                            alt="Medical consultation"
+                                            alt="Best Spine Surgeon &amp; Back Pain doctor in Ganga Ram Hospital"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
@@ -265,7 +270,7 @@ const HomePage: React.FC = () => {
                                 >
                                     <img
                                         src="/images/doc1.jpg"
-                                        alt="Surgical procedure"
+                                        alt="Best Spine Surgeon &amp; Back Pain doctor in Ganga Ram Hospital"
                                         className="w-full h-full object-cover"
                                     />
                                 </motion.div>
@@ -275,7 +280,7 @@ const HomePage: React.FC = () => {
                                 >
                                     <img
                                         src="/images/doc2.jpg"
-                                        alt="Medical imaging review"
+                                        alt="Best Spine Surgeon &amp; Back Pain doctor in Ganga Ram Hospital"
                                         className="w-full h-full object-cover"
                                     />
                                 </motion.div>
@@ -303,12 +308,14 @@ const HomePage: React.FC = () => {
 
                                 <div className="space-y-4">
                                     <h2 className="text-4xl lg:text-5xl font-light text-white">
-                                        Comprehensive
+                                        Get Advanced
                                         <span className="block">Spine Care Solutions</span>
                                     </h2>
 
                                     <p className="text-gray-300 leading-relaxed">
-                                        Dr. Chetan Ram specializes in treating a wide range of spine conditions, from common degenerative disorders to complex spinal deformities. With expertise in both surgical and non-surgical approaches, we provide personalized care for conditions including:
+                                        From common degenerative disorders to complex deformities, Dr Chetan Ram specializes in treating
+                                        a wide range of spine conditions. We offer personalized care depending on both surgical and non-
+                                        surgical methods. Get treatment for various conditions, including:
                                     </p>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -349,7 +356,7 @@ const HomePage: React.FC = () => {
                                 <div className="aspect-[4/3] rounded-lg overflow-hidden">
                                     <img
                                         src="/images/spine1.jpg"
-                                        alt="Spine conditions treatment"
+                                        alt="Best Spine Surgeon &amp; Back Pain doctor in Ganga Ram Hospital"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
@@ -391,7 +398,7 @@ const HomePage: React.FC = () => {
                             viewport={{ once: true }}
                             className="space-y-6"
                         >
-                            <h2 className="text-white text-3xl md:text-4xl font-light">Ready to Take the Next Step?</h2>
+                            <h2 className="text-white text-3xl md:text-4xl font-light">Get Your Spine Problem Resolved!</h2>
                             <p className="text-white text-lg md:text-xl max-w-3xl mx-auto">
                                 Schedule a consultation to discuss your condition and explore the most suitable treatment options.
                             </p>
@@ -402,7 +409,7 @@ const HomePage: React.FC = () => {
                     </div>
                 </section>
             </div>
-         </>
+        </>
     );
 };
 
