@@ -4,6 +4,7 @@ import { treatments, type Procedure } from '../utilities/data';
 import { motion } from 'framer-motion';
 import AppointmentModal from '../utilities/AppointmentModal';
 import { Helmet } from 'react-helmet-async';
+import ReactMarkdown from 'react-markdown';
 
 // Helper function to generate alternative titles for medical terms
 const getLaymanTerms = (title: string): string[] => {
@@ -54,23 +55,19 @@ const SEOTreatmentTemplate: React.FC<{ procedure: Procedure }> = ({ procedure })
   return (
     <Helmet>
       {/* Primary Meta Tags */}
-      <title>{`${procedure.title} - Expert Back & Spine Treatment | Modern Spine Care`}</title>
-      <meta name="description" content={`Learn about ${procedure.title.toLowerCase()} - a ${alternativeTerms[0]}. Treat conditions like ${procedure.conditions.join(', ')}. Expert spine care with minimal recovery time.`} />
+      <title>{`${procedure.metatag}`}</title>
+      
+      <meta name="description" content={`${procedure.metades}`} />
       
       {/* Keywords */}
       <meta name="keywords" content={keywords} />
+      <meta name='' content='' />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="article" />
-      <meta property="og:title" content={`${procedure.title} - Advanced Spine Treatment`} />
-      <meta property="og:description" content={`Suffering from ${procedure.conditions[0].toLowerCase()}? Learn how ${alternativeTerms[0]} can help you recover faster with minimal pain.`} />
+      <meta property="og:title" content={`${procedure.metatag}`} />
+      <meta property="og:description" content={`${procedure.metades}`} />
       <meta property="og:image" content={procedure.imagePath} />
-
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={`${procedure.title} - Modern Spine Treatment`} />
-      <meta name="twitter:description" content={`Expert ${alternativeTerms[0]} for ${procedure.conditions[0].toLowerCase()}. Learn about this advanced treatment option.`} />
-      <meta name="twitter:image" content={procedure.imagePath} />
 
       {/* Schema.org markup */}
       <script type="application/ld+json">
@@ -130,7 +127,7 @@ const TreatmentTemplatePage: React.FC = () => {
         <div className="relative h-full flex items-center justify-center px-4">
           <div className="text-center max-w-4xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl text-white font-light tracking-wide">
-              {procedure.title}
+              {procedure.description}
             </h1>
           </div>
         </div>
@@ -148,16 +145,17 @@ const TreatmentTemplatePage: React.FC = () => {
             <h2 className="text-2xl sm:text-3xl font-light text-gray-900 mb-4">
               Overview
             </h2>
-            <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
-              {procedure.description}
-            </p>
-            {procedure.details && (
+           
+            <ReactMarkdown>
+              {procedure.details}
+            </ReactMarkdown>
+            {/* {procedure.details && (
               <div className="mt-6 sm:mt-8">
                 <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
                   {procedure.details}
                 </p>
               </div>
-            )}
+            )} */}
           </div>
 
           <div className="mt-8 sm:mt-12">

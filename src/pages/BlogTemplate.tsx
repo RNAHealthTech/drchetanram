@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
 import { Link, useParams } from 'react-router-dom';
 import { blogs } from '../utilities/blogs';
-import { marked } from 'marked';
+import { marked } from "marked";
 
 export const BlogTemplate: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -39,6 +39,7 @@ export const BlogTemplate: React.FC = () => {
   }
 
   return (
+    
     <article className="max-w-4xl mx-auto px-4 py-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
