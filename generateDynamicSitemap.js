@@ -1,5 +1,4 @@
 "use strict";
-//"generate-sitemap": "npm run build && node generateDynamicSitemap.js",
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -52,32 +51,32 @@ var sitemap_1 = require("sitemap");
 // const { writeFileSync, readdirSync } = require('fs');
 // const { join } = require('path');
 // const { SitemapStream, streamToPromise } = require('sitemap');
-var hostname = 'https://drchetanspinesurgeon.com/';
+var hostname = "https://drchetanspinesurgeon.com";
 // Function to get image URLs from public/images folder
 function getImageUrls() {
-    var imagesDir = (0, path_1.join)(process.cwd(), 'public', 'images');
+    var imagesDir = (0, path_1.join)(process.cwd(), "public", "images");
     var images = (0, fs_1.readdirSync)(imagesDir);
     return images.map(function (image) { return "".concat(hostname, "/images/").concat(image); });
 }
 // Your existing functions for getting static and dynamic routes
 function getStaticRoutes() {
     return [
-        '/',
-        '/about',
-        '/contact',
-        '/treatments',
-        '/treatments/endoscopic-spine-surgery',
-        '/treatments/microdiscectomy',
-        '/treatments/kyphoplasty-vertebroplasty',
-        '/treatments/oblique-lateral-interbody-fusion',
-        '/treatments/spinal-fusion-surgery',
-        '/treatments/cervical-disc-replacement',
-        '/treatments/complex-spine-deformity-correction',
-        '/treatments/spine-trauma-surgery',
-        '/treatments/spinal-tumor-surgery',
-        '/conditions',
-        '/blogs',
-        '/blog/'
+        "/",
+        "/about",
+        "/contact",
+        "/treatments",
+        "/treatments/endoscopic-spine-surgery",
+        "/treatments/microdiscectomy",
+        "/treatments/kyphoplasty-vertebroplasty",
+        "/treatments/oblique-lateral-interbody-fusion",
+        "/treatments/spinal-fusion-surgery",
+        "/treatments/cervical-disc-replacement",
+        "/treatments/complex-spine-deformity-correction",
+        "/treatments/spine-trauma-surgery",
+        "/treatments/spinal-tumor-surgery",
+        "/conditions",
+        "/blogs",
+        "/blog/",
     ];
 }
 function generateSitemap() {
@@ -96,29 +95,29 @@ function generateSitemap() {
                     });
                     // Add a special entry for your images page (if you have one)
                     stream_1.write({
-                        url: '/images',
+                        url: "/images",
                         img: imageUrls.map(function (url) { return ({
                             url: url,
-                            caption: 'Image from our gallery',
-                            title: url.split('/').pop() // use filename as title
+                            caption: "Image from our gallery",
+                            title: url.split("/").pop()
                         }); })
                     });
                     // Optionally, you can also add image references to other relevant pages
                     // For example, if you have a gallery page:
                     stream_1.write({
-                        url: '/gallery',
+                        url: "/gallery",
                         img: imageUrls.map(function (url) { return ({ url: url }); })
                     });
                     stream_1.end();
                     return [4 /*yield*/, (0, sitemap_1.streamToPromise)(stream_1)];
                 case 1:
                     data = _a.sent();
-                    (0, fs_1.writeFileSync)('./public/sitemap.xml', data.toString());
-                    console.log('Sitemap with images generated successfully');
+                    (0, fs_1.writeFileSync)("./public/sitemap.xml", data.toString());
+                    console.log("Sitemap with images generated successfully");
                     return [3 /*break*/, 3];
                 case 2:
                     error_1 = _a.sent();
-                    console.error('Error generating sitemap:', error_1);
+                    console.error("Error generating sitemap:", error_1);
                     return [3 /*break*/, 3];
                 case 3: return [2 /*return*/];
             }
