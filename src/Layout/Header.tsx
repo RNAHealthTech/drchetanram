@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import WhatsAppModal from '../utilities/WhatsAppForm';
 import { treatments } from '../utilities/data';
@@ -37,10 +38,10 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 z-[99] right-0 transition-all duration-300 ${isSticky ? 'bg-gray-900 shadow-md' : 'bg-transparent'}`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0 flex flex-col sm:flex-row sm:items-center">
+          <Link className="flex-shrink-0 flex flex-col sm:flex-row sm:items-center" to="/">
             <h1 className="text-xl md:text-2xl font-bold text-white">Dr. Chetan Ram Kumawat</h1>
             <p className="text-sm text-white ml-2">Spine Specialist</p>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
