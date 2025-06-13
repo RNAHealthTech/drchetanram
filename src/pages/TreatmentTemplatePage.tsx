@@ -145,6 +145,20 @@ const TreatmentTemplatePage: React.FC = () => {
             <h2 className="text-2xl sm:text-3xl font-light text-gray-900 mb-4">
               Overview
             </h2>
+
+            {procedure?.images && procedure?.images.length > 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+              {procedure.images.map((image, index) => (
+                <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
+                  <img
+                    src={image}
+                    alt='Oblique Lateral Interbody Fusion (OLIF) Surgery In Delhi'
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
            
             <ReactMarkdown>
               {procedure.details}

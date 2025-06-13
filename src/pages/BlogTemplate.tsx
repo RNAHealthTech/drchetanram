@@ -68,6 +68,20 @@ export const BlogTemplate: React.FC = () => {
             ))}
           </div>
 
+          {blog?.images && blog?.images.length > 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+              {blog.images.map((image, index) => (
+                <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
+                  <img
+                    src={image}
+                    alt={`${blog.title} - ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+
           <div className="text-gray-600 mb-8">{blog.summary}</div>
           
           <div 

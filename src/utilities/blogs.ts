@@ -4,6 +4,7 @@ export interface BlogPost {
   summary: string;
   content: string;
   imagePath: string;
+  images?: string[];
   tags: string[];
 }
 
@@ -107,8 +108,10 @@ So, think of OLIF as a smart, gentle way to fix the problem in your spine by usi
 and careful techniques that protect your muscles and nerves, helping you feel better and get back to
 playing sooner!
 `,
+
     tags: ["Back Pain", "Spine Surgeon", "Olif", "Chronic Back Pain"],
     imagePath: "/images/olif.jpeg",
+    images: ["/images/olif-1.jpeg", "/images/olif-2.jpeg", "/images/olif-3.jpeg", "/images/olif-4.jpeg"]
   },
 ]
 //   {

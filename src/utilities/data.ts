@@ -4,6 +4,7 @@ export interface Procedure {
     description: string;
     conditions: string[];
     imagePath: string;
+    images?: string[];
     details?: string;  // Additional content for the template page
     metatag: string;
     metades: string; 
@@ -116,6 +117,7 @@ that combination, book an appointment right away.
           description: "Oblique Lateral Interbody Fusion (OLIF) Surgery In Delhi",
           conditions: ["Degenerative Disc Disease", "Spondylolisthesis", "Spinal Stenosis", "Adult Spinal Deformity"],
           imagePath: "/images/olif.jpeg",
+          images: ["/images/olif-1.jpeg", "/images/olif-2.jpeg", "/images/olif-3.jpeg", "/images/olif-4.jpeg"], 
           metatag: "Oblique Lateral Interbody Fusion (OLIF) Surgeon In Delhi", 
           metades: "Oblique Lateral Interbody Fusion (OLIF) surgery in Delhi by internationally-trained spine specialist at Sir Ganga Ram Hospital. 10+ yrs of experience. Call now.",
           details: 
