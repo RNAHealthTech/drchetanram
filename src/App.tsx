@@ -10,6 +10,9 @@ import Contact from "./pages/Contact";
 import TreatmentTemplatePage from "./pages/TreatmentTemplatePage";
 import { BlogTemplate } from "./pages/BlogTemplate";
 import { HelmetProvider } from "react-helmet-async";
+import DelhiPage from "./pages/DelhiPage";
+import GurgaonPage from "./pages/GurgaonPage";
+import SirGangaRamPage from "./pages/SrghPage";
 
 const useScrollToTop = () => {
   const { pathname } = useLocation();
@@ -27,6 +30,9 @@ const App: React.FC = () => {
     <Layout>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/best-spine-surgeon-in-delhi' element={<DelhiPage />} />
+        <Route path="/best-spine-surgeon-in-gurgaon" element={<GurgaonPage />} />
+        <Route path="/best-spine-doctor-in-sir-ganga-ram-hospital" element={<SirGangaRamPage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/treatments' element={<TreatmentsPage />} />
         <Route path="/treatments/:slug" element={<TreatmentTemplatePage />} />
