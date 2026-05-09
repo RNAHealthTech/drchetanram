@@ -13,6 +13,7 @@ import { HelmetProvider } from "react-helmet-async";
 import DelhiPage from "./pages/DelhiPage";
 import GurgaonPage from "./pages/GurgaonPage";
 import SirGangaRamPage from "./pages/SrghPage";
+import NotFound from "./pages/NotFound";
 
 const useScrollToTop = () => {
   const { pathname } = useLocation();
@@ -40,6 +41,7 @@ const App: React.FC = () => {
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/blog/:slug' element={<BlogTemplate />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
     </HelmetProvider>
